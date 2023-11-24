@@ -91,7 +91,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'UserName, PROFILE CAARD',
+                    'UserName, PROFILE CAAARD',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
