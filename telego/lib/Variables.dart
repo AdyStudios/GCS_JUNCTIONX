@@ -5,7 +5,7 @@ const kPrimaryColor = Color(0xFF6F35A5);
 const kPrimaryLightColor = Color(0xFFF1E6FF);
 // define a text style
 const kTextStyle = TextStyle(
-  color: Colors.white,
+  color: Color.fromARGB(255, 227, 10, 10),
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
 );
