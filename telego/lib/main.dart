@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telego/pages/dailychallenges/home_page_widget.dart';
 import 'MyHomePage.dart';
 import 'TemplatePage.dart';
 import './pages/dashboard/dashboard_model.dart';
@@ -14,7 +15,6 @@ import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,8 @@ void main() async {
         '/': (context) => const MyHomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/dashboard': (context) => const DashboardWidget(),
-        '/daily_challenges': (context) => const TemplatePage(),//TODO: change to route to actual page
+        '/daily_challenges': (context) =>
+            const DailyPageWidget(), //TODO: change to route to actual page
       },
     ),
   );
@@ -96,6 +97,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
-
