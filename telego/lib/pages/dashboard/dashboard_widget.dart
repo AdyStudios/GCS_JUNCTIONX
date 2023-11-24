@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
+import '../../user.dart';
+
 import 'dashboard_model.dart';
 export 'dashboard_model.dart';
 
@@ -61,13 +64,13 @@ class _DashboardWidgetState extends State<DashboardWidget> {
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: Colors.white,
-                    fontSize: 22.0,
+                    fontSize: 22,
                   ),
             ),
           ),
           actions: [],
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -75,31 +78,60 @@ class _DashboardWidgetState extends State<DashboardWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 410.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                width: 410,
+                height: 100,
+                constraints: BoxConstraints(
+                  minWidth: MediaQuery.sizeOf(context).width,
+                  maxWidth: MediaQuery.sizeOf(context).width,
+                  maxHeight: MediaQuery.sizeOf(context).height * 0.1,
                 ),
-                child: Text(
-                  'UserName, PROFILE CARD',
-                  style: FlutterFlowTheme.of(context).bodyMedium,
-                ),
-              ),
-              Container(
-                width: 393.0,
-                height: 100.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'XXX PONT',
+                    'UserName, PROFILE CARD',
+                    textAlign: TextAlign.center,
+                    style: FlutterFlowTheme.of(context).bodyMedium,
+                  ),
+                ),
+              ),
+              Container(
+                width: 393,
+                height: 100,
+                constraints: BoxConstraints(
+                  minWidth: MediaQuery.sizeOf(context).width,
+                  minHeight: MediaQuery.sizeOf(context).height * 0.1,
+                  maxWidth: MediaQuery.sizeOf(context).width,
+                  maxHeight: MediaQuery.sizeOf(context).height * 0.2,
+                ),
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: Align(
+                  alignment: AlignmentDirectional(0.00, 0.00),
+                  child: Text(
+                    'XXX POINTS',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
-                          fontSize: 60.0,
+                          fontSize: 60,
                         ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: Align(
+                  alignment: AlignmentDirectional(0.00, 0.00),
+                  child: Text(
+                    'PHONE NUMBER',
+                    style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
                 ),
               ),
