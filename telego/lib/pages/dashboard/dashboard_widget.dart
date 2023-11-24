@@ -1,9 +1,10 @@
-import 'package:flutterflow_ui/flutterflow_ui.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-
 import 'dashboard_model.dart';
 export 'dashboard_model.dart';
 
@@ -22,6 +23,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
   @override
   void initState() {
     super.initState();
+    _model = createModel(context, () => DashboardModel());
   }
 
   @override
@@ -59,13 +61,13 @@ class _DashboardWidgetState extends State<DashboardWidget> {
               style: FlutterFlowTheme.of(context).headlineMedium.override(
                     fontFamily: 'Outfit',
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 22.0,
                   ),
             ),
           ),
           actions: [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -73,8 +75,8 @@ class _DashboardWidgetState extends State<DashboardWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 410,
-                height: 100,
+                width: 410.0,
+                height: 100.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
@@ -84,8 +86,8 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                 ),
               ),
               Container(
-                width: 393,
-                height: 100,
+                width: 393.0,
+                height: 100.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
@@ -96,7 +98,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
-                          fontSize: 60,
+                          fontSize: 60.0,
                         ),
                   ),
                 ),

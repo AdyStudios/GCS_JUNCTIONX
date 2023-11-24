@@ -17,22 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
-  barcode:
-    dependency: transitive
-    description:
-      name: barcode
-      sha256: "789f898eef0bd88312470bdb2cc996f895ad7dd5f89e9adde84b204546a90b45"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.4"
-  barcode_widget:
-    dependency: transitive
-    description:
-      name: barcode_widget
-      sha256: ea0c0578b5db3ca3a583d80e05eb47bfb70419e3a23b920d93ae7968c45c20ce
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.3"
   boolean_selector:
     dependency: transitive
     description:
@@ -65,14 +49,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
-  carousel_slider:
-    dependency: transitive
-    description:
-      name: carousel_slider
-      sha256: "9c695cc963bf1d04a47bd6021f68befce8970bcd61d24938e1fb0918cf5d9c42"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.1"
   characters:
     dependency: transitive
     description:
@@ -113,22 +89,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
-  emoji_flag_converter:
-    dependency: transitive
-    description:
-      name: emoji_flag_converter
-      sha256: "3be8a0d1b0efbc7713113369ca9671ed73c04dfe80159562b1b725c4259d3e35"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-  equatable:
-    dependency: transitive
-    description:
-      name: equatable
-      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -153,14 +113,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
-  fl_chart:
-    dependency: transitive
-    description:
-      name: fl_chart
-      sha256: cf46edb10b096dc6197e561f6bb7929371baaaff2bca7848982670a152e3d23f
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.55.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -190,14 +142,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.0"
-  flutter_credit_card:
-    dependency: transitive
-    description:
-      name: flutter_credit_card
-      sha256: "1319687c72d124ce6c902c9e29cbc34f4472fe406a59fa2701d25313e70ba8c7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.6"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -206,22 +150,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
-    description:
-      name: flutter_plugin_android_lifecycle
-      sha256: c224ac897bed083dabf11f238dd11a239809b446740be0c2044608c50029ffdf
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.9"
-  flutter_staggered_grid_view:
-    dependency: transitive
-    description:
-      name: flutter_staggered_grid_view
-      sha256: "1312314293acceb65b92754298754801b0e1f26a1845833b740b30415bbbcf07"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.2"
+  flutter_localizations:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -232,14 +165,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutterflow_ui:
-    dependency: "direct main"
-    description:
-      name: flutterflow_ui
-      sha256: e753338d1db0e5c8a8c16fcc9086c1938fc8a1eefec00291e47626394b3221c9
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.0+1"
   font_awesome_flutter:
     dependency: "direct main"
     description:
@@ -272,14 +197,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.3"
-  graphs:
-    dependency: transitive
-    description:
-      name: graphs
-      sha256: aedc5a15e78fc65a6e23bcd927f24c64dd995062bcd1ca6eda65a3cff92a4d19
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.1"
   http:
     dependency: transitive
     description:
@@ -368,14 +285,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
-  mime_type:
-    dependency: transitive
-    description:
-      name: mime_type
-      sha256: "2ad6e67d3d2de9ac0f8ef5352d998fd103cb21351ae8c02fb0c78b079b37d275"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   nested:
     dependency: transitive
     description:
@@ -464,14 +373,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
-  percent_indicator:
-    dependency: transitive
-    description:
-      name: percent_indicator
-      sha256: cec41f67181fbd5322aa68b355621d1a4eea827426b8eeb613f6cbe195ff7b4a
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.2"
   petitparser:
     dependency: transitive
     description:
@@ -504,14 +405,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.4"
-  qr:
-    dependency: transitive
-    description:
-      name: qr
-      sha256: "64957a3930367bf97cc211a5af99551d630f2f4625e38af10edd6b19131b64b3"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.1"
   rfc_6901:
     dependency: transitive
     description:
@@ -520,22 +413,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.1"
-  rive:
-    dependency: transitive
-    description:
-      name: rive
-      sha256: "763b4915b5245428f1188d38c2ff8c26da83ca194d345daa319ca32d69ed670f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.10.3"
-  rive_common:
-    dependency: transitive
-    description:
-      name: rive_common
-      sha256: "89c6264706b18e2526ff220bd23f3ab25ef152d57ebed4b9e4f5d72aebba4f97"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.6"
   rxdart:
     dependency: transitive
     description:
@@ -608,27 +485,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
-  simple_gesture_detector:
-    dependency: transitive
-    description:
-      name: simple_gesture_detector
-      sha256: "86d08f85f1f58583b7b4b941d989f48ea6ce08c1724a1d10954a277c2ec36592"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
-  smooth_page_indicator:
-    dependency: transitive
-    description:
-      name: smooth_page_indicator
-      sha256: "8c301bc686892306cd41672c1880167f140c16be305d5ede8201fefd9fcda829"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   source_span:
     dependency: transitive
     description:
@@ -677,14 +538,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  swipeable_card_stack:
-    dependency: transitive
-    description:
-      name: swipeable_card_stack
-      sha256: "4b21357d042094b460554d2660fcd1486554ddba6389854055b1188c8fa85168"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.5"
   synchronized:
     dependency: transitive
     description:
@@ -693,14 +546,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.0"
-  table_calendar:
-    dependency: transitive
-    description:
-      name: table_calendar
-      sha256: "1e3521a3e6d3fc7f645a58b135ab663d458ab12504f1ea7f9b4b81d47086c478"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.0.9"
   term_glyph:
     dependency: transitive
     description:
