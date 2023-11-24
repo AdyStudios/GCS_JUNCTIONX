@@ -1,8 +1,11 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +14,8 @@ import '../../user.dart';
 import 'dashboard_model.dart';
 export 'dashboard_model.dart';
 
+var l_user = User(69420, "Kara", "+36305789426");
+
 class DashboardWidget extends StatefulWidget {
   const DashboardWidget({Key? key}) : super(key: key);
 
@@ -18,10 +23,26 @@ class DashboardWidget extends StatefulWidget {
   _DashboardWidgetState createState() => _DashboardWidgetState();
 }
 
-class _DashboardWidgetState extends State<DashboardWidget> {
+class _DashboardWidgetState extends State<DashboardWidget>
+    with TickerProviderStateMixin {
   late DashboardModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = {
+    'textOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        TiltEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: Offset(0, 0),
+          end: Offset(0, 0.349),
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -91,7 +112,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'UserName, PROFILE CARD',
+                    l_user.name,
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
@@ -112,13 +133,14 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'XXX POINTS',
+                     l_user.points.toString() + ' POINTS',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           fontSize: 60,
                         ),
-                  ),
+                  ).animateOnPageLoad(
+                      animationsMap['textOnPageLoadAnimation']!),
                 ),
               ),
               Container(
@@ -133,6 +155,28 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                     'PHONE NUMBER',
                     style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
+                ),
+              ),
+              FFButtonWidget(
+                onPressed: () {
+                  print('Button pressed ...'); //TODO: Take to events page!!
+                },
+                text: 'Get More Points',
+                options: FFButtonOptions(
+                  height: 40,
+                  padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  color: FlutterFlowTheme.of(context).primary,
+                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                        fontFamily: 'Readex Pro',
+                        color: Colors.white,
+                      ),
+                  elevation: 3,
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
                 ),
               ),
             ],
