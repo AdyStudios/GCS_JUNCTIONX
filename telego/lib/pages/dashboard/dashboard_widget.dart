@@ -152,16 +152,16 @@ class _DashboardWidgetState extends State<DashboardWidget>
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'PHONE NUMBER',
+                    l_user.phone,
                     style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
                 ),
               ),
               FFButtonWidget(
                 onPressed: () {
-                  print('Button pressed ...'); //TODO: Take to events page!!
+                  Navigator.pushNamed(context, '/daily_challanges');
                 },
-                text: 'Get More Points',
+                text: 'Daily Challanges',
                 options: FFButtonOptions(
                   height: 40,
                   padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),

@@ -32,6 +32,7 @@ void main() async {
         '/': (context) => const MyHomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/dashboard': (context) => const DashboardWidget(),
+        '/daily_challenges': (context) => const TemplatePage(),//TODO: change to route to actual page
       },
     ),
   );
