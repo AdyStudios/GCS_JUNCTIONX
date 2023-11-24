@@ -13,7 +13,7 @@ class MyHomePage extends StatelessWidget {
           // Within the `FirstScreen` widget
           onPressed: () {
             // Navigate to the second screen using a named route.
-            Navigator.pushNamed(context, '/second');
+            Navigator.pushNamed(context, '/dashboard');
           },
           child: const Text('Launch screen'),
         ),
