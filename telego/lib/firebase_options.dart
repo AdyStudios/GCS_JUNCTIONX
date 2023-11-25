@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -48,6 +45,16 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCG6NSYRS7PjI8vENXu96aJDoRxsWdksfc',
+    appId: '1:814893140977:web:68c325955950b88cc65250',
+    messagingSenderId: '814893140977',
+    projectId: 'telegochat',
+    authDomain: 'telegochat.firebaseapp.com',
+    databaseURL: 'https://telegochat-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'telegochat.appspot.com',
+  );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCNgKVuBWHev4T7zDyhIPhCDnFVyl2tyLU',
