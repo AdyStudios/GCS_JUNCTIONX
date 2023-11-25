@@ -7,7 +7,7 @@ import 'package:telego/pages/quiz/screens/score/score_screen.dart';
 // We use get package for our state management
 
 class QuestionController extends GetxController
-    with SingleGetTickerProviderMixin {
+    with GetSingleTickerProviderStateMixin {
   // Lets animated our progress bar
 
   late AnimationController _animationController;

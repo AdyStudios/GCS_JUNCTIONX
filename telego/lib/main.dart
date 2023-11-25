@@ -22,14 +22,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
-void main() async  {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   usePathUrlStrategy();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(
-    ChangeNotifierProvider(create: (context) => AuthService(),
-    child: MyApp())
-  );
+  runApp(ChangeNotifierProvider(
+      create: (context) => AuthService(), child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -68,7 +66,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-
       debugShowCheckedModeBanner: false,
       title: 'TeleGo Dashboard',
       localizationsDelegates: [
@@ -77,7 +74,7 @@ class _MyAppState extends State<MyApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: _locale,  
+      locale: _locale,
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(
         brightness: Brightness.light,
@@ -101,7 +98,7 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'DailyChallanges';
+  String _currentPageName = 'Dashboard';
   late Widget? _currentPage;
 
   @override
@@ -119,7 +116,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'Dashboard': DashboardWidget(),
       'leaderboard': LeaderboardWidget(),
       'Messenger': AuthGate(),
-      
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
