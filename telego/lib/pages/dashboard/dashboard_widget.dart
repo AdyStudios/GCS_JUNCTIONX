@@ -30,11 +30,68 @@ class _DashboardWidgetState extends State<DashboardWidget>
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         TiltEffect(
-          curve: Curves.easeInOut,
+          curve: Curves.bounceOut,
+          delay: 0.ms,
+          duration: 1170.ms,
+          begin: Offset(0, 0.681),
+          end: Offset(0, 0),
+        ),
+      ],
+    ),
+    'buttonOnPageLoadAnimation1': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 0),
-          end: Offset(0, 0.349),
+          begin: 0,
+          end: 1,
+        ),
+        ScaleEffect(
+          curve: Curves.easeOut,
+          delay: 0.ms,
+          duration: 170.ms,
+          begin: Offset(0.5, 0.5),
+          end: Offset(1, 1),
+        ),
+      ],
+    ),
+    'buttonOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0,
+          end: 1,
+        ),
+        ScaleEffect(
+          curve: Curves.easeOut,
+          delay: 0.ms,
+          duration: 170.ms,
+          begin: Offset(0.5, 0.5),
+          end: Offset(1, 1),
+        ),
+      ],
+    ),
+    'buttonOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0,
+          end: 1,
+        ),
+        ScaleEffect(
+          curve: Curves.easeOut,
+          delay: 0.ms,
+          duration: 170.ms,
+          begin: Offset(0.5, 0.5),
+          end: Offset(1, 1),
         ),
       ],
     ),
@@ -127,45 +184,38 @@ class _DashboardWidgetState extends State<DashboardWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: 410,
-                height: 100,
-                constraints: BoxConstraints(
-                  minWidth: MediaQuery.sizeOf(context).width,
-                  maxWidth: MediaQuery.sizeOf(context).width,
-                  maxHeight: MediaQuery.sizeOf(context).height * 0.1,
-                ),
+                width: MediaQuery.sizeOf(context).width,
+                height: MediaQuery.sizeOf(context).height * 0.15,
                 decoration: BoxDecoration(
                   color: Color(0xFF404040),
                 ),
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    'Kara Adam',
+                    'Welcome back,\nKara!',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
+                    style: FlutterFlowTheme.of(context).titleLarge.override(
+                          fontFamily: 'Outfit',
                           color: Color(0xFFE8E9EB),
+                          fontSize: 40,
                         ),
                   ),
                 ),
               ),
+              Divider(
+                thickness: 1,
+                color: FlutterFlowTheme.of(context).accent4,
+              ),
               Container(
-                width: 393,
-                height: 100,
-                constraints: BoxConstraints(
-                  minWidth: MediaQuery.sizeOf(context).width,
-                  minHeight: MediaQuery.sizeOf(context).height * 0.1,
-                  maxWidth: MediaQuery.sizeOf(context).width,
-                  maxHeight: MediaQuery.sizeOf(context).height * 0.2,
-                ),
+                width: MediaQuery.sizeOf(context).width,
+                height: MediaQuery.sizeOf(context).height * 0.15,
                 decoration: BoxDecoration(
                   color: Color(0xFF404040),
                 ),
                 child: Align(
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
-                    "69400 POINTS",
-                    textAlign: TextAlign.center,
+                    '69420 POINTS',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: Color(0xFFF7B644),
@@ -175,42 +225,137 @@ class _DashboardWidgetState extends State<DashboardWidget>
                       animationsMap['textOnPageLoadAnimation']!),
                 ),
               ),
-              FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
-                },
-                text: 'Get More Points',
-                options: FFButtonOptions(
-                  height: 40,
-                  padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                  color: Color(0xFF498C8A),
-                  textStyle: FlutterFlowTheme.of(context).titleMedium.override(
-                        fontFamily: 'Readex Pro',
-                        color: Color(0xFFE8E9EB),
-                      ),
-                  elevation: 3,
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                    width: 1,
+              Divider(
+                thickness: 1,
+                color: FlutterFlowTheme.of(context).accent4,
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.00, 1.00),
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery.sizeOf(context).height * 0.3,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF404040),
                   ),
-                  borderRadius: BorderRadius.circular(8),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: 'Daily Challanges',
+                            options: FFButtonOptions(
+                              width: MediaQuery.sizeOf(context).width * 0.8,
+                              height: MediaQuery.sizeOf(context).height * 0.1,
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                              iconPadding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              color: Color(0xFF1CDFC8),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 40,
+                                  ),
+                              elevation: 3,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['buttonOnPageLoadAnimation1']!),
+                          FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: 'Quizes',
+                            options: FFButtonOptions(
+                              width: MediaQuery.sizeOf(context).width * 0.8,
+                              height: MediaQuery.sizeOf(context).height * 0.1,
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                              iconPadding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              color: Color(0xFF1CDFC8),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 40,
+                                  ),
+                              elevation: 3,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['buttonOnPageLoadAnimation2']!),
+                        ].divide(SizedBox(height: 20)),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Color(0xFF404040),
-                ),
-                child: Align(
-                  alignment: AlignmentDirectional(0.00, 0.00),
-                  child: Text(
-                    'PHONE NUMBER',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
-                          color: Color(0xFFE8E9EB),
-                        ),
+              Divider(
+                thickness: 1,
+                color: FlutterFlowTheme.of(context).accent4,
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.00, 1.00),
+                child: Container(
+                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery.sizeOf(context).height * 0.2,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF404040),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FFButtonWidget(
+                            onPressed: () {
+                              print('Button pressed ...');
+                            },
+                            text: 'Rewards',
+                            options: FFButtonOptions(
+                              width: MediaQuery.sizeOf(context).width * 0.8,
+                              height: MediaQuery.sizeOf(context).height * 0.1,
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                              iconPadding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                              color: Color(0xFFF7B644),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 40,
+                                  ),
+                              elevation: 3,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['buttonOnPageLoadAnimation3']!),
+                        ].divide(SizedBox(height: 20)),
+                      ),
+                    ),
                   ),
                 ),
               ),
