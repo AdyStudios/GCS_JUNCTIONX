@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:telego/pages/chat_home_page.dart';
+import 'package:telego/pages/chat/chat_home_page.dart';
 import 'package:telego/services/auth/login_or_reg.dart';
 
 class AuthGate extends StatelessWidget {

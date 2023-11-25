@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:telego/firebase_options.dart';
+import 'package:telego/pages/chat/chat_home_page.dart';
 import 'package:telego/pages/daily_challanges/daily_challanges_widget.dart';
 import 'package:telego/pages/leaderboard/leaderboard_widget.dart';
 import 'package:telego/pages/pass/pass_widget.dart';
@@ -66,6 +67,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'TeleGo Dashboard',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
@@ -118,6 +120,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'pass': PassWidget(),
       'Dashboard': DashboardWidget(),
       'leaderboard': LeaderboardWidget(),
+      'Messenger': AuthGate(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -165,9 +168,17 @@ class _NavBarPageState extends State<NavBarPage> {
               FontAwesomeIcons.trophy,
               size: 24.0,
             ),
-            label: 'Home',
+            label: 'Leaderboard',
             tooltip: '',
-          )
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.facebookMessenger,
+              size: 24.0,
+            ),
+            label: 'Messenger',
+            tooltip: '',
+          ),
         ],
       ),
     );

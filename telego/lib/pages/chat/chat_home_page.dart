@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:telego/services/auth/auth_service.dart';
-import 'package:telego/pages/chat_page.dart';
+import 'package:telego/pages/chat/chat_page.dart';
 
 class ChatHomePage extends StatefulWidget {
   const ChatHomePage({super.key});

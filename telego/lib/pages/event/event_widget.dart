@@ -271,9 +271,17 @@ class _EventWidgetState extends State<EventWidget>
                         ).animateOnPageLoad(
                             animationsMap['buttonOnPageLoadAnimation1']!),
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
+                          onPressed: () async {
+                                context.pushNamed(
+                                  'dashboard',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                    ),
+                                  },
+                                );
+                              },
                           text: 'Rewards',
                           options: FFButtonOptions(
                             width: MediaQuery.sizeOf(context).width * 0.6,

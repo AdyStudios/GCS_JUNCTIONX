@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage>{
                 size:80,
               ),
               const SizedBox(height: 25),
-              Text("Welcome back!", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 30, color: button_text_color)),
+              Text("Experience true freedom!", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 30, color: button_text_color)),
               const SizedBox(height: 50),
               MyTextField(controller: emailController, hintText: 'Phone Number', obscureText: false),
               const SizedBox(height: 10),
