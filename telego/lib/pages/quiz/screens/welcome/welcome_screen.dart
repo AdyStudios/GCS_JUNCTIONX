@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:telego/flutter_flow/flutter_flow_animations.dart';
+import 'package:telego/flutter_flow/flutter_flow_theme.dart';
+import 'package:telego/flutter_flow/flutter_flow_util.dart';
+import 'package:telego/flutter_flow/flutter_flow_widgets.dart';
+import 'package:telego/flutter_flow/nav/nav.dart';
 import 'package:telego/pages/quiz/constants.dart';
 import 'package:telego/pages/quiz/screens/quiz/quiz_screen.dart';
 
@@ -19,40 +24,47 @@ class QuizPage extends StatelessWidget {
                   Text(
                     "Let's Play Quiz,",
                     style: Theme.of(context).textTheme.headline4?.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                        color: kDefaultIconDarkColor, fontWeight: FontWeight.bold),
                   ),
                   Text("Enter your informations below"),
                   Spacer(), // 1/6
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xFF1C2341),
-                      hintText: "Full Name",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                      ),
-                    ),
-                  ),
-                  Spacer(), // 1/6
-                  InkWell(
-                    onTap: () => Get.to(QuizScreen()),
-                    child: Container(
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.all(kDefaultPadding * 0.75), // 15
-                      decoration: BoxDecoration(
-                        gradient: kPrimaryGradient,
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                      ),
-                      child: Text(
-                        "Lets Start Quiz",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button
-                            ?.copyWith(color: Colors.black),
-                      ),
-                    ),
-                  ),
+                  Spacer(), 
+                  FFButtonWidget(
+                              onPressed: () async {
+                                context.pushNamed(
+                                  'quiz_screen',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                    ),
+                                  },
+                                );
+                              },
+                              text: 'Start Quiz',
+                              options: FFButtonOptions(
+                                width: MediaQuery.sizeOf(context).width * 0.8,
+                                height: MediaQuery.sizeOf(context).height * 0.1,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    24.0, 0.0, 24.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xFFF7B644),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 40.0,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                          ),
+                  
                   Spacer(flex: 2), // it will take 2/6 spaces
                 ],
               ),

@@ -9,8 +9,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'dashboard_model.dart';
-import 'package:telego/Variables.dart';
-
 export 'dashboard_model.dart';
 
 class DashboardWidget extends StatefulWidget {
@@ -128,12 +126,12 @@ class _DashboardWidgetState extends State<DashboardWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: background_color,
+        backgroundColor: Color(0xFF404040),
         appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.sizeOf(context).height * 0.1),
           child: AppBar(
-            backgroundColor: primary_orange_color,
+            backgroundColor: Color(0xFFF7B644),
             automaticallyImplyLeading: false,
             title: Align(
               alignment: AlignmentDirectional(0.00, 0.00),
@@ -166,7 +164,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             .headlineMedium
                             .override(
                               fontFamily: 'Outfit',
-                              color: button_text_color,
+                              color: Color(0xFFE8E9EB),
                             ),
                       ),
                     ),
@@ -190,7 +188,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 0.15,
                   decoration: BoxDecoration(
-                    color: background_color,
+                    color: Color(0xFF404040),
                   ),
                   child: Align(
                     alignment: AlignmentDirectional(0.00, 0.00),
@@ -199,7 +197,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).titleLarge.override(
                             fontFamily: 'Outfit',
-                            color: button_text_color,
+                            color: Color(0xFFE8E9EB),
                             fontSize: 40.0,
                           ),
                     ),
@@ -207,13 +205,13 @@ class _DashboardWidgetState extends State<DashboardWidget>
                 ),
                 Divider(
                   thickness: 1.0,
-                  color: divider_color,
+                  color: FlutterFlowTheme.of(context).accent4,
                 ),
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 0.2,
                   decoration: BoxDecoration(
-                    color: background_color,
+                    color: Color(0xFF404040),
                   ),
                   child: Align(
                     alignment: AlignmentDirectional(0.00, 0.00),
@@ -222,7 +220,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: primary_orange_color,
+                            color: Color(0xFFF7B644),
                             fontSize: 60.0,
                           ),
                     ).animateOnPageLoad(
@@ -231,15 +229,15 @@ class _DashboardWidgetState extends State<DashboardWidget>
                 ),
                 Divider(
                   thickness: 1.0,
-                  color: divider_color,
+                  color: FlutterFlowTheme.of(context).accent4,
                 ),
                 Align(
                   alignment: AlignmentDirectional(0.00, 1.00),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: MediaQuery.sizeOf(context).height * 0.15,
+                    height: MediaQuery.sizeOf(context).height * 0.3,
                     decoration: BoxDecoration(
-                      color: background_color,
+                      color: Color(0xFF404040),
                     ),
                     child: Padding(
                       padding:
@@ -250,9 +248,37 @@ class _DashboardWidgetState extends State<DashboardWidget>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FFButtonWidget(
-                              onPressed:  () async {
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'Daily Challanges',
+                              options: FFButtonOptions(
+                                width: MediaQuery.sizeOf(context).width * 0.8,
+                                height: MediaQuery.sizeOf(context).height * 0.1,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    24.0, 0.0, 24.0, 0.0),
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: Color(0xFF1CDFC8),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      fontSize: 40.0,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ).animateOnPageLoad(
+                                animationsMap['buttonOnPageLoadAnimation1']!),
+                            FFButtonWidget(
+                              onPressed: () async {
                                 context.pushNamed(
-                                  'Quiz',
+                                  'quiz_welcome',
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
@@ -278,7 +304,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
-                                  color: background_color,
+                                  color: Colors.transparent,
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
@@ -291,13 +317,17 @@ class _DashboardWidgetState extends State<DashboardWidget>
                     ),
                   ),
                 ),
+                Divider(
+                  thickness: 1.0,
+                  color: FlutterFlowTheme.of(context).accent4,
+                ),
                 Align(
                   alignment: AlignmentDirectional(0.00, 1.00),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 0.2,
                     decoration: BoxDecoration(
-                      color: background_color,
+                      color: Color(0xFF404040),
                     ),
                     child: Padding(
                       padding:
@@ -327,7 +357,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: primary_orange_color,
+                                color: Color(0xFFF7B644),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(

@@ -20,6 +20,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
 import 'package:telego/main.dart';
 
+import 'package:telego/pages/quiz/screens/welcome/welcome_screen.dart';
+import 'package:telego/pages/quiz/screens/quiz/quiz_screen.dart';
+import 'package:telego/pages/quiz/screens/score/score_screen.dart';
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
 
@@ -83,9 +86,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => EventWidget(),
         ),
         FFRoute(
+          name: 'quiz_welcome',
+          path: '/quiz_welcome',
+          builder: (context, params) => QuizPage(),
+        ),
+        FFRoute(
           name: 'quiz_screen',
           path: '/quiz_screen',
-          builder: (context, params) => EventWidget(),
+          builder: (context, params) => QuizScreen(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
