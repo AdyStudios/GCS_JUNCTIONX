@@ -98,11 +98,14 @@ class _ChatPageState extends State<ChatPage> {
 
   return Container(
     alignment: alignment,
-    child: Column(
-      children: [
-        Text(data['senderEmail'] ?? ''), // Add null-check for senderEmail
-        Text(data['message'] ?? ''), // Add null-check for message
-      ],
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Text(data['senderEmail'] ?? ''), // Add null-check for senderEmail
+          Text(data['message'] ?? ''), // Add null-check for message
+        ],
+      ),
     ),
   );
 }
