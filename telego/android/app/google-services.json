@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "814893140977",
+    "firebase_url": "https://telegochat-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "telegochat",
+    "storage_bucket": "telegochat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814893140977:android:045375a3e86cdb42c65250",
+        "android_client_info": {
+          "package_name": "com.example.telego"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNgKVuBWHev4T7zDyhIPhCDnFVyl2tyLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814893140977:android:e1a27003c1dc77a4c65250",
+        "android_client_info": {
+          "package_name": "com.example.telego_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNgKVuBWHev4T7zDyhIPhCDnFVyl2tyLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
