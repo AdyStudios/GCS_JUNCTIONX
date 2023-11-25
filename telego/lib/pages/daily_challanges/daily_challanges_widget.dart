@@ -6,25 +6,25 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'dailychallange_model.dart';
-export 'dailychallange_model.dart';
+import 'daily_challanges_model.dart';
+export 'daily_challanges_model.dart';
 
-class DailyPageWidget extends StatefulWidget {
-  const DailyPageWidget({Key? key}) : super(key: key);
+class DailyChallangesWidget extends StatefulWidget {
+  const DailyChallangesWidget({Key? key}) : super(key: key);
 
   @override
-  _DailyPageWidgetState createState() => _DailyPageWidgetState();
+  _DailyChallangesWidgetState createState() => _DailyChallangesWidgetState();
 }
 
-class _DailyPageWidgetState extends State<DailyPageWidget> {
-  late DailyChallangeModel _model;
+class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
+  late DailyChallangesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DailyChallangeModel());
+    _model = createModel(context, () => DailyChallangesModel());
   }
 
   @override
@@ -53,28 +53,53 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(10.0),
+          preferredSize:
+              Size.fromHeight(MediaQuery.sizeOf(context).height * 0.1),
           child: AppBar(
             backgroundColor: Color(0xFFF7B644),
             automaticallyImplyLeading: false,
-            actions: [],
-            flexibleSpace: FlexibleSpaceBar(
-              title: Align(
-                alignment: AlignmentDirectional(0.00, 1.00),
-                child: Text(
-                  'TeleGo Daily',
-                  textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).headlineMedium.override(
-                        fontFamily: 'Outfit',
-                        color: Colors.white,
-                        fontSize: 22.0,
+            title: Align(
+              alignment: AlignmentDirectional(0.00, 0.00),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.00, 0.00),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        '../../../assets/images/Layer_1.png',
+                        width: 65.0,
+                        height: 65.0,
+                        fit: BoxFit.cover,
+                        alignment: Alignment(0.00, 0.00),
                       ),
-                ),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.00, 0.00),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                      child: Text(
+                        'Daily Challanges',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context)
+                            .headlineMedium
+                            .override(
+                              fontFamily: 'Outfit',
+                              color: Color(0xFFE8E9EB),
+                            ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              centerTitle: true,
-              expandedTitleScale: 1.0,
             ),
-            toolbarHeight: 10.0,
+            actions: [],
+            centerTitle: false,
+            toolbarHeight: MediaQuery.sizeOf(context).height * 0.1,
             elevation: 2.0,
           ),
         ),
@@ -98,8 +123,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: Container(
-                              width: 350.0,
-                              height: 120.0,
+                              width: MediaQuery.sizeOf(context).width * 0.9,
+                              height: MediaQuery.sizeOf(context).height * 0.15,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
                                 border: Border.all(
@@ -160,8 +185,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
-                            width: 350.0,
-                            height: 120.0,
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: MediaQuery.sizeOf(context).height * 0.15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -236,8 +261,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
-                            width: 350.0,
-                            height: 120.0,
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: MediaQuery.sizeOf(context).height * 0.15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -312,8 +337,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
-                            width: 350.0,
-                            height: 120.0,
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: MediaQuery.sizeOf(context).height * 0.15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -371,8 +396,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
-                            width: 350.0,
-                            height: 120.0,
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: MediaQuery.sizeOf(context).height * 0.15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -430,8 +455,8 @@ class _DailyPageWidgetState extends State<DailyPageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
-                            width: 350.0,
-                            height: 120.0,
+                            width: MediaQuery.sizeOf(context).width * 0.9,
+                            height: MediaQuery.sizeOf(context).height * 0.15,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(

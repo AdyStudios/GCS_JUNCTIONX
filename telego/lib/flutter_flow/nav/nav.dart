@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:telego/pages/daily_challanges/daily_challanges_widget.dart';
+import 'package:telego/pages/event/event_widget.dart';
+import 'package:telego/pages/leaderboard/leaderboard_widget.dart';
+import 'package:telego/pages/pass/pass_widget.dart';
 
 import '/index.dart';
 import '/main.dart';
@@ -12,6 +16,7 @@ import '/flutter_flow/lat_lng.dart';
 import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
+import 'package:telego/main.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -36,17 +41,44 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => DashboardWidget(),
+      errorBuilder: (context, state) => NavBarPage(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => DashboardWidget(),
+          builder: (context, _) => NavBarPage(),
         ),
         FFRoute(
           name: 'Dashboard',
           path: '/dashboard',
-          builder: (context, params) => DashboardWidget(),
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Dashboard')
+              : DashboardWidget(),
+        ),
+        FFRoute(
+          name: 'DailyChallanges',
+          path: '/dailyChallanges',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'DailyChallanges')
+              : DailyChallangesWidget(),
+        ),
+        FFRoute(
+          name: 'pass',
+          path: '/pass',
+          builder: (context, params) =>
+              params.isEmpty ? NavBarPage(initialPage: 'pass') : PassWidget(),
+        ),
+        FFRoute(
+          name: 'leaderboard',
+          path: '/leaderboard',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'leaderboard')
+              : LeaderboardWidget(),
+        ),
+        FFRoute(
+          name: 'event',
+          path: '/event',
+          builder: (context, params) => EventWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
