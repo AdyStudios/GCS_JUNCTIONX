@@ -114,7 +114,6 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'Quiz':QuizScreen(),
       'DailyChallanges': DailyChallangesWidget(),
       'pass': PassWidget(),
       'Dashboard': DashboardWidget(),
