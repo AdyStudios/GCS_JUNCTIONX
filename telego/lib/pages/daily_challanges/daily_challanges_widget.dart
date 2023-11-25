@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'daily_challanges_model.dart';
+import 'package:telego/Variables.dart';
 export 'daily_challanges_model.dart';
 
 class DailyChallangesWidget extends StatefulWidget {
@@ -56,7 +57,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
           preferredSize:
               Size.fromHeight(MediaQuery.sizeOf(context).height * 0.1),
           child: AppBar(
-            backgroundColor: Color(0xFFF7B644),
+            backgroundColor: primary_orange_color,
             automaticallyImplyLeading: false,
             title: Align(
               alignment: AlignmentDirectional(0.00, 0.00),
@@ -89,7 +90,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                             .headlineMedium
                             .override(
                               fontFamily: 'Outfit',
-                              color: Color(0xFFE8E9EB),
+                              color: kPrimaryLightColor,
                             ),
                       ),
                     ),
