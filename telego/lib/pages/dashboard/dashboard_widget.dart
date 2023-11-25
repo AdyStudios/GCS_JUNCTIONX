@@ -1,3 +1,5 @@
+import 'package:telego/pages/quiz/screens/welcome/welcome_screen.dart';
+
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -276,8 +278,16 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             ).animateOnPageLoad(
                                 animationsMap['buttonOnPageLoadAnimation1']!),
                             FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed:  () async {
+                                context.pushNamed(
+                                  'Quiz',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType: PageTransitionType.fade,
+                                    ),
+                                  },
+                                );
                               },
                               text: 'Quizes',
                               options: FFButtonOptions(

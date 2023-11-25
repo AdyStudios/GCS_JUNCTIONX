@@ -8,6 +8,8 @@ import 'package:telego/pages/daily_challanges/daily_challanges_widget.dart';
 import 'package:telego/pages/event/event_widget.dart';
 import 'package:telego/pages/leaderboard/leaderboard_widget.dart';
 import 'package:telego/pages/pass/pass_widget.dart';
+import 'package:telego/pages/quiz/screens/welcome/welcome_screen.dart';
+
 
 import '/index.dart';
 import '/main.dart';
@@ -78,6 +80,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'event',
           path: '/event',
+          builder: (context, params) => EventWidget(),
+        ),
+        FFRoute(
+          name: 'quiz_screen',
+          path: '/quiz_screen',
           builder: (context, params) => EventWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),

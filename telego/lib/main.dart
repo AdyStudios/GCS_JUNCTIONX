@@ -10,6 +10,7 @@ import 'package:telego/services/auth/auth_gate.dart';
 import 'package:telego/services/auth/auth_service.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:telego/pages/quiz/screens/quiz/quiz_screen.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -116,11 +117,13 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
+      'Quiz':QuizScreen(),
       'DailyChallanges': DailyChallangesWidget(),
       'pass': PassWidget(),
       'Dashboard': DashboardWidget(),
       'leaderboard': LeaderboardWidget(),
       'Messenger': AuthGate(),
+      
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
