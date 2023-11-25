@@ -4,6 +4,7 @@ import 'MyHomePage.dart';
 import 'TemplatePage.dart';
 import './pages/dashboard/dashboard_model.dart';
 import './pages/dashboard/dashboard_widget.dart';
+import './pages/tutorial/TutorialPage.dart';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -32,8 +33,8 @@ void main() async {
         '/': (context) => const MyHomePage(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/dashboard': (context) => const DashboardWidget(),
-        '/daily_challenges': (context) =>
-            const DailyPageWidget(), //TODO: change to route to actual page
+        '/daily_challenges': (context) => const DailyPageWidget(),
+        '/tutorial': (context) => TutorialPage(),
       },
     ),
   );
