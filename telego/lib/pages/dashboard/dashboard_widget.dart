@@ -9,6 +9,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'dashboard_model.dart';
+import 'package:telego/Variables.dart';
+
 export 'dashboard_model.dart';
 
 class DashboardWidget extends StatefulWidget {

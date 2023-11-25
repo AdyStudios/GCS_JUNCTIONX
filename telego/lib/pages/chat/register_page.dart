@@ -18,12 +18,13 @@ class _RegisterPageState extends State<RegisterPage>{
   final phoneNumController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final usernameController = TextEditingController();
 
   void signUp() async {
     final authService = Provider.of<AuthService>(context, listen: false);
     
     try{
-      await authService.signUpWithEmailandPassword(emailController.text, passwordController.text);
+      await authService.signUpWithEmailandPassword(emailController.text, usernameController.text, passwordController.text);
     }
     catch (e){
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
@@ -50,6 +51,7 @@ class _RegisterPageState extends State<RegisterPage>{
               Text("Let's create an account for \nYou!", style: TextStyle( fontSize: 16)),
               const SizedBox(height: 50),
               MyTextField(controller: emailController, hintText: 'Phone Number', obscureText: false),
+              MyTextField(controller: usernameController, hintText: 'Username', obscureText: false),
               MyTextField(controller: passwordController, hintText: 'Password', obscureText: false),
               const SizedBox(height: 25),
               MyButton(onTap: signUp, text: "Register Now"),
