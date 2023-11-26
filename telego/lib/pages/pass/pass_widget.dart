@@ -1,3 +1,5 @@
+import 'package:telego/Variables.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -513,8 +515,7 @@ class _PassWidgetState extends State<PassWidget> {
                                         animation: true,
                                         animateFromLastPercent: true,
                                         progressColor:
-                                            FlutterFlowTheme.of(context)
-                                                .primary,
+                                            secondary_blue,
                                         backgroundColor:
                                             FlutterFlowTheme.of(context)
                                                 .accent4,
