@@ -278,7 +278,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed(
-                                  'quiz_welcome',
+                                  'quiz_screen',
                                   extra: <String, dynamic>{
                                     kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,

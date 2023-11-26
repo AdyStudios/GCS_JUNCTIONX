@@ -8,7 +8,6 @@ import 'package:telego/pages/daily_challanges/daily_challanges_widget.dart';
 import 'package:telego/pages/event/event_widget.dart';
 import 'package:telego/pages/leaderboard/leaderboard_widget.dart';
 import 'package:telego/pages/pass/pass_widget.dart';
-import 'package:telego/pages/quiz/screens/welcome/welcome_screen.dart';
 
 
 import '/index.dart';
@@ -20,9 +19,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
 import 'package:telego/main.dart';
 
-import 'package:telego/pages/quiz/screens/welcome/welcome_screen.dart';
-import 'package:telego/pages/quiz/screens/quiz/quiz_screen.dart';
-import 'package:telego/pages/quiz/screens/score/score_screen.dart';
+import 'package:telego/pages/quiz/quiz_screen.dart';
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
 
@@ -84,11 +81,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'event',
           path: '/event',
           builder: (context, params) => EventWidget(),
-        ),
-        FFRoute(
-          name: 'quiz_welcome',
-          path: '/quiz_welcome',
-          builder: (context, params) => QuizPage(),
         ),
         FFRoute(
           name: 'quiz_screen',
