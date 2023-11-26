@@ -159,7 +159,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
-                        '../../../assets/images/Layer_1.png',
+                        'images/icon.png',
                         width: 65,
                         height: 65,
                         fit: BoxFit.cover,

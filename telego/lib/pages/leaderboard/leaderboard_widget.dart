@@ -70,7 +70,7 @@ class _LeaderboardWidgetState extends State<LeaderboardWidget> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
-                        '../../../assets/images/Layer_1.png',
+                        'images/icon.png',
                         width: 65,
                         height: 65,
                         fit: BoxFit.cover,

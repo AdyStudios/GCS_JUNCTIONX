@@ -123,7 +123,7 @@ class _EventWidgetState extends State<EventWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
-                        '../../../assets/images/Layer_1.png',
+                        'images/icon.png',
                         width: 65.0,
                         height: 65.0,
                         fit: BoxFit.cover,
