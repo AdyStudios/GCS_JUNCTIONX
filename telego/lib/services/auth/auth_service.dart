@@ -16,7 +16,6 @@ class AuthService extends ChangeNotifier{
       _firestore.collection('users').doc(userCredential.user!.uid).set({
         'uid': userCredential.user!.uid,
         'email': email,
-        'username': userCredential.user!.displayName,
     }, SetOptions(merge: true));
 
       return userCredential;

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:telego/components/chat_bubble.dart';
 import 'package:telego/components/m_text_filed.dart';
 import 'package:telego/services/chat/chat_service.dart';
 
@@ -101,9 +102,15 @@ class _ChatPageState extends State<ChatPage> {
     child: Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: (data['senderId'] == _firebaseAuth.currentUser!.uid)
+            ? CrossAxisAlignment.end
+            : CrossAxisAlignment.start,
+        mainAxisAlignment: (data['senderId'] == _firebaseAuth.currentUser!.uid)
+            ? MainAxisAlignment.end
+            : MainAxisAlignment.start,
         children: [
           Text(data['senderEmail'] ?? ''), // Add null-check for senderEmail
-          Text(data['message'] ?? ''), // Add null-check for message
+          ChatBubble(message: data['message'], data: data), // Add null-check for message
         ],
       ),
     ),
