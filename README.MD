@@ -1,5 +1,3 @@
-# TeleGO - 
-## HACKATHON: JUNCTION X BUDAPEST Crafthub I. Challange
 # TeleGO
 
 ### The Idea
