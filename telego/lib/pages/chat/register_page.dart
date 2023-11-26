@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:telego/Variables.dart';
 import 'package:telego/components/m_button.dart';
 import 'package:telego/components/m_text_filed.dart';
 import 'package:telego/services/auth/auth_service.dart';
@@ -36,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: background_color,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -44,14 +45,16 @@ class _RegisterPageState extends State<RegisterPage>{
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                Icons.message, 
+                Icons.chat_bubble_outline_rounded,
                 size:80,
               ),
               const SizedBox(height: 25),
-              Text("Let's create an account for \nYou!", style: TextStyle( fontSize: 16)),
+              Text("Experience true freedom.", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 30, color: button_text_color)),
               const SizedBox(height: 50),
-              MyTextField(controller: emailController, hintText: 'Phone Number', obscureText: false),
+              MyTextField(controller: emailController, hintText: 'Email', obscureText: false),
+              const SizedBox(height: 10),
               MyTextField(controller: usernameController, hintText: 'Username', obscureText: false),
+              const SizedBox(height: 10),
               MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
               const SizedBox(height: 25),
               MyButton(onTap: signUp, text: "Register Now"),

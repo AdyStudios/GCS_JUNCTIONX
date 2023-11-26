@@ -1,3 +1,5 @@
+import 'package:telego/pages/quiz/quiz_screen.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -210,7 +212,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 5.0, 5.0),
                                       child: Text(
-                                        'Mobile data enjoyer',
+                                        'Telecom enjoyer',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -224,12 +226,22 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 5.0, 5.0),
-                                    child: Text(
-                                      'Use more than 1 GB mobile data',
+                                    child: GestureDetector(
+                                      onTap: () async {
+                                        await Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                QuizScreen(),
+                                          ),
+                                        );
+                                      },
+                                      child: Text(
+                                      'Fill out the Telecom Basic quiz',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
-                                  ),
+                                  )),
                                   Align(
                                     alignment: AlignmentDirectional(1.00, 0.00),
                                     child: CircularPercentIndicator(

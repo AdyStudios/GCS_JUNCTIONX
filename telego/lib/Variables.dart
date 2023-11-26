@@ -22,6 +22,8 @@ const kDefaultPadding = 20.0;
 
 const divider_color = Color.fromARGB(255, 0, 0, 0);
 
+const secondary_blue = Color(0xFF1CDFC8);
+
 const kPrimaryGradient = LinearGradient(
   colors: [Color(0xFF46A0AE), Color(0xFF00FFCB)],
   begin: Alignment.centerLeft,
