@@ -84,7 +84,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                       child: Text(
-                        'Daily Challanges',
+                        'Daily Challenges',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -125,7 +125,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                 10.0, 10.0, 10.0, 10.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 0.9,
-                              height: MediaQuery.sizeOf(context).height * 0.15,
+                              height: MediaQuery.sizeOf(context).height * 0.18,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
                                 border: Border.all(
@@ -145,7 +145,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 5.0, 5.0),
                                       child: Text(
-                                        'TeleGo News',
+                                        'Telego News',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -160,7 +160,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 5.0, 5.0),
                                     child: Text(
-                                      'Go to TeleGo\'s website to see news and discounts',
+                                      'Go to Telego\'s website to see news and discounts',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
@@ -187,7 +187,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: MediaQuery.sizeOf(context).height * 0.15,
+                            height: MediaQuery.sizeOf(context).height * 0.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -210,7 +210,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 5.0, 5.0),
                                       child: Text(
-                                        'Mobile net enjoyer',
+                                        'Mobile data enjoyer',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -225,7 +225,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 5.0, 5.0),
                                     child: Text(
-                                      'Use more than 1 GB mobile net',
+                                      'Use more than 1 GB mobile data',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
@@ -263,7 +263,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: MediaQuery.sizeOf(context).height * 0.15,
+                            height: MediaQuery.sizeOf(context).height * 0.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -339,7 +339,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: MediaQuery.sizeOf(context).height * 0.15,
+                            height: MediaQuery.sizeOf(context).height * 0.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -398,7 +398,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: MediaQuery.sizeOf(context).height * 0.15,
+                            height: MediaQuery.sizeOf(context).height * 0.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(
@@ -457,7 +457,7 @@ class _DailyChallangesWidgetState extends State<DailyChallangesWidget> {
                               10.0, 10.0, 10.0, 10.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.9,
-                            height: MediaQuery.sizeOf(context).height * 0.15,
+                            height: MediaQuery.sizeOf(context).height * 0.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
                               border: Border.all(

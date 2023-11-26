@@ -243,10 +243,18 @@ class _EventWidgetState extends State<EventWidget>
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.pushNamed(
+                              'DailyChallanges',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                ),
+                              },
+                            );
                           },
-                          text: 'Daily Challanges',
+                          text: 'Daily Challenges',
                           options: FFButtonOptions(
                             width: MediaQuery.sizeOf(context).width * 0.6,
                             height: MediaQuery.sizeOf(context).height * 0.05,
@@ -272,17 +280,17 @@ class _EventWidgetState extends State<EventWidget>
                             animationsMap['buttonOnPageLoadAnimation1']!),
                         FFButtonWidget(
                           onPressed: () async {
-                                context.pushNamed(
-                                  'dashboard',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType: PageTransitionType.fade,
-                                    ),
-                                  },
-                                );
+                            context.pushNamed(
+                              'pass',
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType: PageTransitionType.fade,
+                                ),
                               },
-                          text: 'Rewards',
+                            );
+                          },
+                          text: 'TelePass',
                           options: FFButtonOptions(
                             width: MediaQuery.sizeOf(context).width * 0.6,
                             height: MediaQuery.sizeOf(context).height * 0.05,

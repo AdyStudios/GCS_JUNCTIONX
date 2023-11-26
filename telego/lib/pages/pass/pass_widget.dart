@@ -170,7 +170,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -227,13 +227,13 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium,
                                     ),
                                     Text(
-                                      '1 HOUR FREE MOBILE NET',
+                                      '1 HOUR FREE MOBILE DATA',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -296,7 +296,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -369,7 +369,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -426,13 +426,13 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium,
                                     ),
                                     Text(
-                                      '+6 HOUR BLACKOUT MOBILE NET',
+                                      '+6 HOUR BLACKOUT MOBILE DATA',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -495,7 +495,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -591,7 +591,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     Icon(
@@ -643,13 +643,13 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium,
                                     ),
                                     Text(
-                                      '250 MB FOREIGN MOBILE NET',
+                                      '250 MB FOREIGN MOBILE DATA',
                                       textAlign: TextAlign.center,
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     FaIcon(
@@ -707,7 +707,7 @@ class _PassWidgetState extends State<PassWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            fontSize: 20.0,
+                                            fontSize: 15.0,
                                           ),
                                     ),
                                     FaIcon(

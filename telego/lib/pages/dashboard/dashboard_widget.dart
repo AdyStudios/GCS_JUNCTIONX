@@ -166,7 +166,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             .headlineMedium
                             .override(
                               fontFamily: 'Outfit',
-                              color: button_text_color,
+                              color: appbar_text_color,
                             ),
                       ),
                     ),
@@ -250,7 +250,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FFButtonWidget(
-                              onPressed:  () async {
+                              onPressed: () async {
                                 context.pushNamed(
                                   'Quiz',
                                   extra: <String, dynamic>{
@@ -277,10 +277,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                       fontSize: 40.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
-                                  color: background_color,
-                                  width: 1.0,
-                                ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ).animateOnPageLoad(
@@ -335,10 +331,6 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                       fontSize: 40.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1.0,
-                                ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ).animateOnPageLoad(

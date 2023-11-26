@@ -13,11 +13,12 @@ const kTextStyle = TextStyle(
 // define a project name
 const kProjectName = "TeleGO";
 
-const background_color = Color(0xFF404040);
+const background_color = Color.fromARGB(255, 251, 251, 251);
 
 const primary_orange_color = Color.fromARGB(255, 247, 182, 68);
-const button_text_color = Color(0xFFE8E9EB);
-const kDefaultPadding=20.0;
+const button_text_color = Color.fromARGB(255, 0, 0, 0);
+const appbar_text_color = Color.fromARGB(255, 255, 255, 255);
+const kDefaultPadding = 20.0;
 
 const divider_color = Color.fromARGB(255, 0, 0, 0);
 
