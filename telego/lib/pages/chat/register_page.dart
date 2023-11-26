@@ -52,7 +52,7 @@ class _RegisterPageState extends State<RegisterPage>{
               const SizedBox(height: 50),
               MyTextField(controller: emailController, hintText: 'Phone Number', obscureText: false),
               MyTextField(controller: usernameController, hintText: 'Username', obscureText: false),
-              MyTextField(controller: passwordController, hintText: 'Password', obscureText: false),
+              MyTextField(controller: passwordController, hintText: 'Password', obscureText: true),
               const SizedBox(height: 25),
               MyButton(onTap: signUp, text: "Register Now"),
               const SizedBox(height: 25),
