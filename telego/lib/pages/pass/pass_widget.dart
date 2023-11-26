@@ -520,7 +520,7 @@ class _PassWidgetState extends State<PassWidget> {
                                             FlutterFlowTheme.of(context)
                                                 .accent4,
                                         center: Text(
-                                          '69420PT/90000PT',
+                                          '24864/25000PT',
                                           textAlign: TextAlign.center,
                                           style: FlutterFlowTheme.of(context)
                                               .headlineSmall

@@ -22,7 +22,7 @@ class ChatBubble extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         color: (data['senderId'] == locFirebaseAuth.currentUser!.uid)
             ? primary_orange_color
-            :kPrimaryColor,
+            :secondary_blue,
       ),
       child: Text(
         message,

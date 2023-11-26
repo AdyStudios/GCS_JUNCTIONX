@@ -230,7 +230,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                   child: Align(
                     alignment: AlignmentDirectional(0.00, 0.00),
                     child: Text(
-                      '69420 POINTS',
+                      '24864 POINTS',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',

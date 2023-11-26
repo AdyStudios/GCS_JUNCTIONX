@@ -154,10 +154,10 @@ class _QuizScreenState extends State<QuizScreen> {
       isPassed = true;
     }
     String title = isPassed ? "Passed " : "Failed";
-
+    String points = isPassed? "+1500 points" : "";
     return AlertDialog(
     title: Text(
-      title + "\nYour score was $score",
+      title + "\nYour score was $score\n" +points,
       style: TextStyle(color: isPassed ? Colors.green : Colors.redAccent, fontSize: 24, fontWeight: FontWeight.bold),
       textAlign: TextAlign.center,
     ),
